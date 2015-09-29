@@ -7,7 +7,8 @@ public enum SortingAlgorithm {
 
     BUBBLE_SORT_ALGORITHM(SortingAlgorithmName.BUBBLE_SORT, new BubbleSort()),
     INSERTION_SORT_ALGORITHM(SortingAlgorithmName.INSERTION_SORT, new InsertionSort()),
-    QUICK_SORT_ALGORITHM(SortingAlgorithmName.QUICK_SORT, new QuickSort());
+    QUICK_SORT_ALGORITHM(SortingAlgorithmName.QUICK_SORT, new QuickSort()),
+    SELECTION_SORT_ALGORITHM(SortingAlgorithmName.SELECTION_SORT, new SelectionSort());
 
     private final SortingAlgorithmName name;
     private final Sortable algorithm;
@@ -30,6 +31,10 @@ public enum SortingAlgorithm {
 
             case QUICK_SORT:
                 algorithm = SortingAlgorithm.QUICK_SORT_ALGORITHM;
+                break;
+
+            case SELECTION_SORT:
+                algorithm = SortingAlgorithm.SELECTION_SORT_ALGORITHM;
                 break;
 
             default:

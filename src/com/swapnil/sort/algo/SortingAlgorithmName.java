@@ -6,5 +6,6 @@ package com.swapnil.sort.algo;
 public enum SortingAlgorithmName {
     BUBBLE_SORT,
     QUICK_SORT,
-    INSERTION_SORT;
+    INSERTION_SORT,
+    SELECTION_SORT;
 }

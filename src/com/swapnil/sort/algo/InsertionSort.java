@@ -11,9 +11,6 @@ public class InsertionSort  extends Sortable {
     public void sort(int [] inputArray) {
         super.sort(inputArray);
         insertionSort();
-
-        // System.out.print("\nAfter Sort : ");
-        // SortUtil.display(inputArray);
     }
 
     private void insertionSort() {
@@ -27,10 +24,20 @@ public class InsertionSort  extends Sortable {
             }
 
             inputArray[j+1] = key;
-
-            // System.out.print("\nAfter Run Number : " + i + " --> ");
-            // SortUtil.display(inputArray);
-
         }
     }
+
+    public static void main(String [] args) {
+        Sortable sortable = new BubbleSort();
+        int [] input = {2, 0, 0, 2, 1, 4, 7, 0, 0, 4};
+
+        System.out.println("\nBefore Sort : ");
+        SortUtil.display(input);
+
+        sortable.sort(input);
+
+        System.out.println("\nAfter Sort : ");
+        SortUtil.display(input);
+    }
+
 }
