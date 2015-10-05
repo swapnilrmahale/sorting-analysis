@@ -1,7 +1,5 @@
 package com.swapnil.sort.algo;
 
-import com.swapnil.sort.util.SortUtil;
-
 /**
  * Created by swapn on 26-09-2015.
  */
@@ -19,7 +17,7 @@ public abstract class Sortable {
         this.length = inputArray.length;
     }
 
-    public void sort(int [] inputArray) {
+    public void sort(int[] inputArray) {
         preSort(inputArray);
         // System.out.println("\n\n - - - - - " + this.getClass().getSimpleName() + " - - - - -");
         // System.out.print("\nBefore Sort : ");

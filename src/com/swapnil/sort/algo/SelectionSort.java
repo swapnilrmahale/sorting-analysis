@@ -5,7 +5,20 @@ import com.swapnil.sort.util.SortUtil;
 /**
  * Created by swapn on 29-09-2015.
  */
-public class SelectionSort extends Sortable{
+public class SelectionSort extends Sortable {
+
+    public static void main(String[] args) {
+        Sortable sortable = new SelectionSort();
+        int[] input = {2, 0, 0, 2, 1, 4, 7, 0, 0, 4};
+
+        System.out.println("\nBefore Sort : ");
+        SortUtil.display(input);
+
+        sortable.sort(input);
+
+        System.out.println("\nAfter Sort : ");
+        SortUtil.display(input);
+    }
 
     @Override
     public void sort(int[] inputArray) {
@@ -33,18 +46,5 @@ public class SelectionSort extends Sortable{
 
             /* So, in each iteration minimum value of unsorted list will be swapped */
         }
-    }
-
-    public static void main(String [] args) {
-        Sortable sortable = new SelectionSort();
-        int [] input = {2, 0, 0, 2, 1, 4, 7, 0, 0, 4};
-
-        System.out.println("\nBefore Sort : ");
-        SortUtil.display(input);
-
-        sortable.sort(input);
-
-        System.out.println("\nAfter Sort : ");
-        SortUtil.display(input);
     }
 }

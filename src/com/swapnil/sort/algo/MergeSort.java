@@ -9,6 +9,19 @@ public class MergeSort extends Sortable {
 
     private int[] tempArray;
 
+    public static void main(String[] args) {
+        Sortable sortable = new MergeSort();
+        int[] input = {2, 0, 0, 2, 1, 4, 7, 0, 0, 4};
+
+        System.out.println("\nBefore Sort : ");
+        SortUtil.display(input);
+
+        sortable.sort(input);
+
+        System.out.println("\nAfter Sort : ");
+        SortUtil.display(input);
+    }
+
     @Override
     public void sort(int[] inputArray) {
         super.sort(inputArray);
@@ -59,19 +72,6 @@ public class MergeSort extends Sortable {
             i++;
             k++;
         }
-    }
-
-    public static void main(String[] args) {
-        Sortable sortable = new MergeSort();
-        int[] input = {2, 0, 0, 2, 1, 4, 7, 0, 0, 4};
-
-        System.out.println("\nBefore Sort : ");
-        SortUtil.display(input);
-
-        sortable.sort(input);
-
-        System.out.println("\nAfter Sort : ");
-        SortUtil.display(input);
     }
 
 }

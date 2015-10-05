@@ -30,21 +30,20 @@ public class FileUtil {
 
     public static boolean isFileExist(String filePath) {
         File file = new File(filePath);
-        if (file.exists()) {
-            return true;
-        }
-        return false;
+        return file.exists();
     }
 
-    public static void backupFile(String filePath) throws IOException{
+    public static void backupFile(String filePath) throws IOException {
         File oldFile = new File(filePath);
         String backupFileName = oldFile.getPath() + "." + new Date().getTime() + ".bkp";
         File backupFile = new File(backupFileName);
-        if(oldFile.renameTo(backupFile)) {
+        if (oldFile.renameTo(backupFile)) {
             System.out.println("Backed up earlier report file at " + backupFileName);
         } else {
-            System.out.println("Error while taking backup of Old Report File. Deleting without taking backup" );
-            oldFile.delete();
+            System.out.println("Error while taking backup of Old Report File. Deleting without taking backup");
+            if (oldFile.delete()) {
+                System.out.println("File Deleted...");
+            }
         }
     }
 }

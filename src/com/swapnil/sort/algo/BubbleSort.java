@@ -5,16 +5,28 @@ import com.swapnil.sort.util.SortUtil;
 /**
  * Created by swapn on 26-09-2015.
  */
-public class BubbleSort extends Sortable{
+public class BubbleSort extends Sortable {
+
+    public static void main(String[] args) {
+        Sortable sortable = new BubbleSort();
+        int[] input = {2, 0, 0, 2, 1, 4, 7, 0, 0, 4};
+
+        System.out.println("\nBefore Sort : ");
+        SortUtil.display(input);
+
+        sortable.sort(input);
+
+        System.out.println("\nAfter Sort : ");
+        SortUtil.display(input);
+    }
 
     @Override
-    public void sort(int [] inputArray) {
+    public void sort(int[] inputArray) {
         super.sort(inputArray);
 
         bubbleSort();
 
     }
-
 
     private void bubbleSort1() {
         for (int outerIndex = 0; outerIndex < length; outerIndex++) {
@@ -26,7 +38,7 @@ public class BubbleSort extends Sortable{
                 }
             }
 
-            System.out.print("\nAfter Iteration Number " + (outerIndex+1) +" : ");
+            System.out.print("\nAfter Iteration Number " + (outerIndex + 1) + " : ");
             SortUtil.display(inputArray);
         }
     }
@@ -44,23 +56,10 @@ public class BubbleSort extends Sortable{
                 }
             }
 
-            System.out.print("\nAfter Iteration Number " + iterationNumber++ + " : ");
-            SortUtil.display(inputArray);
+            /*System.out.print("\nAfter Iteration Number " + iterationNumber++ + " : ");
+            SortUtil.display(inputArray);*/
 
-        }while(isSwapped);
-    }
-
-    public static void main(String [] args) {
-        Sortable sortable = new BubbleSort();
-        int [] input = {2, 0, 0, 2, 1, 4, 7, 0, 0, 4};
-
-        System.out.println("\nBefore Sort : ");
-        SortUtil.display(input);
-
-        sortable.sort(input);
-
-        System.out.println("\nAfter Sort : ");
-        SortUtil.display(input);
+        } while (isSwapped);
     }
 }
 

@@ -5,10 +5,23 @@ import com.swapnil.sort.util.SortUtil;
 /**
  * Created by swapn on 26-09-2015.
  */
-public class QuickSort extends Sortable{
+public class QuickSort extends Sortable {
+
+    public static void main(String[] args) {
+        Sortable sortable = new QuickSort();
+        int[] input = {2, 0, 0, 2, 1, 4, 7, 0, 0, 4};
+
+        System.out.println("\nBefore Sort : ");
+        SortUtil.display(input);
+
+        sortable.sort(input);
+
+        System.out.println("\nAfter Sort : ");
+        SortUtil.display(input);
+    }
 
     @Override
-    public void sort(int [] inputArray) {
+    public void sort(int[] inputArray) {
 
         super.sort(inputArray);
         quickSort(0, length - 1);
@@ -49,18 +62,4 @@ public class QuickSort extends Sortable{
         if (i < endIndex)
             quickSort(i, endIndex);
     }
-
-    public static void main(String [] args) {
-        Sortable sortable = new QuickSort();
-        int [] input = {2, 0, 0, 2, 1, 4, 7, 0, 0, 4};
-
-        System.out.println("\nBefore Sort : ");
-        SortUtil.display(input);
-
-        sortable.sort(input);
-
-        System.out.println("\nAfter Sort : ");
-        SortUtil.display(input);
-    }
-
 }
