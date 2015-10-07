@@ -5,11 +5,11 @@ package com.swapnil.sort.sorter;
  */
 public enum SortingAlgorithmName {
     BUBBLE_SORT,
-    BUCKET_SORT,
     HEAP_SORT,
     INSERTION_SORT,
     MERGE_SORT,
     QUICK_SORT,
     SELECTION_SORT,
-    SHELL_SORT
+    SHELL_SORT,
+    
 }
